@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.RealBusinessCRM.AppointmentInfoController">
+   <children>
+      <Text fx:id="txt_appointmentheadline" layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Appointment">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
+      <Text layoutX="14.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="General Information">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tf_title" layoutX="40.0" layoutY="112.0" promptText="Title" />
+      <TextField fx:id="tf_desc" layoutX="213.0" layoutY="112.0" promptText="Description" />
+      <TextField fx:id="tf_location" layoutX="40.0" layoutY="154.0" promptText="Location" />
+      <DatePicker fx:id="dp_date" layoutX="40.0" layoutY="200.0" promptText="Event Date" />
+      <TextField fx:id="tf_appid" editable="false" layoutX="527.0" layoutY="18.0" prefHeight="25.0" prefWidth="47.0" promptText="ID" />
+      <Text fx:id="txt_appid" layoutX="429.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment ID:" />
+      <ChoiceBox fx:id="cb_customer" layoutX="87.0" layoutY="260.0" prefWidth="150.0" />
+      <Text layoutX="24.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer:" />
+      <Text layoutX="52.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User:" />
+      <ChoiceBox fx:id="cb_user" layoutX="87.0" layoutY="303.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="cb_contact" layoutX="87.0" layoutY="346.0" prefWidth="150.0" />
+      <Text layoutX="34.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact:" />
+      <TextField fx:id="tf_type" layoutX="213.0" layoutY="154.0" promptText="Type" />
+      <Button fx:id="btn_save" layoutX="421.0" layoutY="345.0" mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save" />
+      <Button fx:id="btn_cancel" layoutX="484.0" layoutY="345.0" mnemonicParsing="false" onAction="#onCancelButtonClick" text="Cancel" />
+      <TextField fx:id="tf_starttime" layoutX="226.0" layoutY="200.0" prefHeight="25.0" prefWidth="88.0" promptText="8:00am" />
+      <TextField fx:id="tf_endtime" layoutX="343.0" layoutY="200.0" prefHeight="25.0" prefWidth="88.0" promptText="9:00am" />
+      <Text layoutX="323.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to" />
+   </children>
+</AnchorPane>

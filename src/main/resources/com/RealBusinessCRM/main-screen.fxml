@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="681.0" prefWidth="1199.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.RealBusinessCRM.MainScreenController">
+   <children>
+      <TabPane layoutY="-1.0" prefHeight="681.0" prefWidth="1199.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Customers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="customerTable" layoutX="11.0" layoutY="43.0" prefHeight="583.0" prefWidth="1179.0">
+                          <columns>
+                            <TableColumn fx:id="col_c_custid" prefWidth="88.0" text="Customer ID" />
+                            <TableColumn fx:id="col_c_name" prefWidth="130.0" text="Name" />
+                              <TableColumn fx:id="col_c_address" prefWidth="229.0" text="Address" />
+                              <TableColumn fx:id="col_c_postalcode" prefWidth="89.0" text="Postal Code" />
+                              <TableColumn fx:id="col_c_phone" prefWidth="105.0" text="Phone" />
+                              <TableColumn fx:id="col_c_division" prefWidth="119.0" text="Division" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer List">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="btn_c_create" layoutX="914.0" layoutY="8.0" mnemonicParsing="false" onAction="#onCustomerCreateButtonClick" text="+ Create New" />
+                        <Button fx:id="btn_c_update" layoutX="1042.0" layoutY="8.0" mnemonicParsing="false" onAction="#onCustomerUpdateButtonClick" text="Update" />
+                        <Button fx:id="btn_c_delete" layoutX="1134.0" layoutY="8.0" mnemonicParsing="false" text="Delete" />
+                        <Text fx:id="txt_c_currenttime" layoutX="1040.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Time: 12:00am (EST)" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.142578125" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Appointments">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="11.0" layoutY="43.0" prefHeight="583.0" prefWidth="1179.0">
+                          <columns>
+                            <TableColumn fx:id="col_a_appid" prefWidth="108.0" text="Appointment ID" />
+                            <TableColumn fx:id="col_a_title" prefWidth="126.0" text="Title" />
+                              <TableColumn fx:id="col_a_desc" prefWidth="193.0" text="Description" />
+                              <TableColumn fx:id="col_a_location" prefWidth="153.0" text="Location" />
+                              <TableColumn fx:id="col_a_contact" prefWidth="104.0" text="Contact" />
+                              <TableColumn fx:id="col_a_type" prefWidth="77.0" text="Type" />
+                              <TableColumn fx:id="col_a_startdatetime" prefWidth="130.0" text="Start Date &amp; Time" />
+                              <TableColumn fx:id="col_a_enddatetime" prefWidth="123.0" text="End Date &amp; Time" />
+                              <TableColumn fx:id="col_a_custid" prefWidth="88.0" text="Customer ID" />
+                              <TableColumn fx:id="col_a_userid" prefWidth="76.0" text="User ID" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments List">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <RadioButton fx:id="radio_a_showMonth" layoutX="206.0" layoutY="631.0" mnemonicParsing="false" text="Month">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="appointmentSort" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="radio_a_showWeek" layoutX="274.0" layoutY="631.0" mnemonicParsing="false" text="Week" toggleGroup="$appointmentSort" />
+                        <Text layoutX="14.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Display Appointments By: " />
+                        <Text fx:id="txt_a_currenttime" layoutX="1040.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Time: 12:00am (EST)" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.142578125" />
+                        <Button fx:id="btn_a_create" layoutX="914.0" layoutY="8.0" mnemonicParsing="false" onAction="#onAppointmentCreateButtonClick" text="+ Create New" />
+                        <Button fx:id="btn_a_update" layoutX="1042.0" layoutY="8.0" mnemonicParsing="false" onAction="#onAppointmentUpdateButtonClick" text="Update" />
+                        <Button fx:id="btn_a_delete" layoutX="1134.0" layoutY="8.0" mnemonicParsing="false" text="Delete" />
+                        <RadioButton fx:id="radio_a_showAll" layoutX="159.0" layoutY="631.0" mnemonicParsing="false" selected="true" text="All" toggleGroup="$appointmentSort" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
