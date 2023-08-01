@@ -1,4 +1,4 @@
-module com.c195project {
+module com.RealBusinessCRM {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
